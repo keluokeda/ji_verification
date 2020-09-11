@@ -1,0 +1,3 @@
+include ':jverification'
+include ':app'
+rootProject.name = "ji_verification"
