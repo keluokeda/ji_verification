@@ -6,7 +6,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "xxx.xxx.xxx"
+        applicationId "com.icarguard.ichebao"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -22,6 +22,7 @@ android {
 
 
     }
+
 
 
     buildTypes {

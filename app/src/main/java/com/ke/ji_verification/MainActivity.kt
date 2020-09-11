@@ -56,12 +56,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         privacy.setOnClickListener {
-            JiVerificationService.setAppPrivacy(
-                "用户协议", "https://www.jiguang.cn/about",
-                "用户协议", "https://www.jiguang.cn/about"
-
-            )
+            JiVerificationService.setCustomUI("用户协议", "https://baidu.com", "logo")
         }
+
     }
 
 

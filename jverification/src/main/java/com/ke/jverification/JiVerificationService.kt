@@ -88,13 +88,13 @@ object JiVerificationService {
     /**
      * 设置协议，每次登录前都设置一下
      */
-    fun setAppPrivacy(title1: String, url1: String, title2: String, url2: String) {
+    fun setCustomUI(title: String, url: String,logoPath:String) {
         val config = JVerifyUIConfig.Builder()
 
 
-        config.setAppPrivacyOne(title1, url1)
-        config.setAppPrivacyTwo(title2, url2)
+        config.setAppPrivacyOne(title, url)
         config.setPrivacyState(true)
+        config.setLogoImgPath(logoPath)
 
         JVerificationInterface.setCustomUIWithConfig(config.build())
     }
