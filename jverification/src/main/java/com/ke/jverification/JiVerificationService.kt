@@ -78,7 +78,7 @@ object JiVerificationService {
 
         return Observable.create { emitter ->
             JVerificationInterface.loginAuth(context, loginSettings) { code, content, operator ->
-                emitter.onNext(VerifyResult(code == 6000, URLEncoder.encode(content,"utf-8"), operator))
+                emitter.onNext(VerifyResult(code == 6000, content, operator))
                 emitter.onComplete()
 
             }
