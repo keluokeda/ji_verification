@@ -5,7 +5,6 @@ import cn.jiguang.verifysdk.api.JVerificationInterface
 import cn.jiguang.verifysdk.api.JVerifyUIConfig
 import cn.jiguang.verifysdk.api.LoginSettings
 import io.reactivex.Observable
-import java.net.URLEncoder
 
 object JiVerificationService {
 
@@ -88,12 +87,12 @@ object JiVerificationService {
     /**
      * 设置协议，每次登录前都设置一下
      */
-    fun setCustomUI(title: String, url: String,logoPath:String) {
+    fun setCustomUI(title: String, url: String, logoPath: String, privacyState: Boolean = false) {
         val config = JVerifyUIConfig.Builder()
 
 
         config.setAppPrivacyOne(title, url)
-        config.setPrivacyState(true)
+        config.setPrivacyState(privacyState)
         config.setLogoImgPath(logoPath)
 
         JVerificationInterface.setCustomUIWithConfig(config.build())
